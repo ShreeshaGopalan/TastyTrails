@@ -1,0 +1,46 @@
+    <div class="layout">
+    <%- include('partials/header.ejs') %>
+    <main class="mid-container">
+    <section class="container-div">
+    <a href="/" class="back">Back</a>
+    <section class="search">
+        <form action="/search" method="POST">
+            <input type="text" name="query" placeholder="Search for a recipe..." required>
+            <button type="submit">Search</button>
+        </form>
+    </section>  
+    </section>    
+
+    <h2 class="sr-heading">Saved Recipes</h2>
+
+    <% if (recipes && recipes.length === 0) { %>
+        <div class="no-result">
+        <p>No recipes saved yet. Search for recipes to save your favorites!</p>
+        </div>
+    <% } else { %>
+        <div class="card-container"> 
+        <% recipes.forEach(recipe => { %>
+            <div class="card">
+                <img class="image" src="<%= recipe.image_url %>" alt="<%= recipe.title %>">
+                <h3 class="title"><%= recipe.title %></h3>
+
+                <!-- View Recipe (by API ID) -->
+            <a class="button" href="/recipe/<%= recipe.api_id %>">View Recipe</a>
+            
+            <!-- Delete Recipe (by Database ID) -->
+            <form action="/delete-recipe/<%= recipe.id %>" method="POST">
+                <button type="submit">Remove</button>
+            </form>
+            
+            </div>
+        <% }); %>
+    </div>
+        <% } %>
+
+    </main>
+
+
+        <%- include('partials/footer.ejs') %>
+
+    
+    </div>

@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+<section class="detail-container">
+
+<div class="top-div">
+<a href="/search" class="back">Back</a>
+<form action="/save-recipe" method="POST">
+  <input type="hidden" name="title" value="<%= recipe.title %>">
+  <input type="hidden" name="image" value="<%= recipe.image %>">
+  <input type="hidden" name="apiId" value="<%= recipe.id %>">
+  <button class="button" type="submit">Save</button>
+</form>
+</div>
+
+<div class="recipe-detail">
+  <h1><%= recipe.title %></h1>
+  <img src="<%= recipe.image %>" alt="<%= recipe.title %>">
+  <p><%- recipe.summary %></p>
+<div class="ii-div">
+    <div class="ingredients">
+  <h2>Ingredients</h2>
+  <ul>
+    <% recipe.extendedIngredients.forEach(ingredient => { %>
+      <li><%= ingredient.original %></li>
+    <% }); %>
+  </ul>
+</div>
+<div class="instruction">
+  <h2>Instructions</h2>
+  <% if (recipe.analyzedInstructions.length > 0) { %>
+    <% recipe.analyzedInstructions.forEach(instruction => { %>
+      <ol>
+        <% instruction.steps.forEach(step => { %>
+          <li><%= step.step %></li>
+        <% }); %>
+      </ol>
+    <% }); %>
+  <% } else { %>
+    <p>No instructions available for this recipe.</p>
+  <% } %>
+</div>
+</div>
+</div>
+</section>
+
+<%- include('partials/footer.ejs') %>

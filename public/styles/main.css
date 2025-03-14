@@ -1,0 +1,511 @@
+body{
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mid-container{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+/* header */
+
+header .container{
+    display: flex;
+    justify-content: center;
+    background-color: #303E27;
+    padding: 20px;
+    
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #303E27;
+    padding: 20px;
+    font-size: 12px;    
+}
+
+/* hero section */
+
+
+.hero {
+    width: 100%;
+    min-height: 82vh;
+    background-image: url(/images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Overlay for readability */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 35, 15, 0.85); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flex container for content */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left side content */
+.content {
+    flex: 1;
+    color: white;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Heading and description */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Button container */
+.btn-div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Button styles */
+.hero-button {
+    padding: 12px 20px;
+    background: #FFCE3A;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.hero-button:hover {
+    background: #1f2b18;
+}
+
+/* Right side image */
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Slight hover effect */
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
+
+/* card (done)*/
+
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    width: 100%;
+    height: 380px; /* Fixed height for all cards */
+    justify-content: space-between;
+}
+
+/* Image styling */
+.image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover; /* Crop and fit images */
+}
+
+/* Title styling with text ellipsis */
+.title {
+    font-size: 1rem;
+    margin: 15px 0;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Button styling */
+.button {
+    padding: 10px 14px;
+    background: #1f2b18;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.button:hover {
+    background: #2a3e1f;
+    transform: scale(1.05);
+}
+
+
+/* Card container to align all cards uniformly */
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 30px 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/*Smooth transition for entire layout */
+* {
+    transition: all 0.3s ease-in-out;
+}
+/* done */
+
+/* Form button styling (for delete button) */
+form button {
+    border: none;
+    background: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Delete button hover effect */
+form button:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+
+
+
+
+.no-result{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh; /* Fill the full screen height */
+    
+}
+
+
+/* search bar */
+
+
+.container-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%; 
+    width: 100%; 
+}
+
+.top-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%; 
+    width: 100%; 
+}
+
+
+
+
+.search{
+    width: 100%; 
+    max-width: 500px;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 80%;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+    background: #f3fbf6 ;
+}
+
+.search button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #FFCE3A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.search button:hover {
+    background: #1f2b18;
+}
+
+/* detailed recipe  */
+
+.recipe-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: black;
+    padding: 0 20px 20px;
+}
+
+.recipe-detail h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #1f2b18;
+}
+
+.recipe-detail img {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Summary */
+.recipe-detail p {
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Ingredients and Instructions */
+.ii-div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 80%;
+}
+
+.ingredients, .instruction {
+    background-color: #1f2b18;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 45%;
+    text-align: left;
+}
+
+.ingredients h2,
+.instruction h2 {
+    text-align: center;
+    color: #FFCE3A;
+    margin-bottom: 15px;
+}
+
+/* Ingredients List */
+.ingredients ul {
+    padding-left: 20px;
+}
+
+.ingredients li {
+    margin-bottom: 8px;
+}
+
+/* Instructions */
+.instruction ol {
+    padding-left: 20px;
+}
+
+.instruction li {
+    margin-bottom: 10px;
+}
+
+
+
+.back{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.back:hover{
+    text-decoration: underline;
+}
+
+
+
+.sr-heading{
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+/* Tablet View */
+@media (max-width: 1024px) {
+
+    .hero{
+        height: 100vh;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .btn-div {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 90%;
+        height: auto;
+    }
+
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-button {
+        padding: 10px 16px;
+        
+    }
+
+    .hero-image img {
+        height: 400px;
+        padding: 20px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .btn-div {
+        gap: 10px;
+    }
+
+    .container-div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .recipe-detail h1 {
+        font-size: 1.5rem;
+    }
+
+    .ii-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .ingredients, .instruction{
+        max-width: 100%;
+    }
+    
+
+   
+}

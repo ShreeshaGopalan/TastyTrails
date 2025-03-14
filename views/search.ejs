@@ -1,0 +1,26 @@
+<div class="layout">
+<%- include('partials/header.ejs') %>
+<main class="mid-container">
+<section class="container-div">
+<a href="/" class="back">Back</a>
+<section class="search">
+<form action="/search" method="POST">
+    <input type="text" name="query" placeholder="Search for a recipe..." required>
+    <button type="submit">Search</button>
+</form>
+</section>  
+
+</section>
+<div class="card-container">  
+
+<% recipes.forEach(recipe => { %>
+    <div class="card">
+        <img class="image" src="<%= recipe.image %>" alt="<%= recipe.title %>">
+        <h3 class="title"><%= recipe.title %></h3>
+        <a class=button href="/recipe/<%= recipe.id %>" class="view-recipe">View Recipe</a>
+    </div>
+<% }); %> 
+</div>
+</main>
+<%- include('partials/footer.ejs') %>
+</div>
