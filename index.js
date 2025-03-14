@@ -4,7 +4,7 @@ import axios from "axios";
 import pg from "pg";
 
 const app = express();
-const port = 3000;
+const port = 4000;
 const key = "0f7e1eeb01e34246a68313ea587af7cb";
 
 // Database connection setup
